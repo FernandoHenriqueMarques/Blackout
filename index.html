@@ -1,99 +1,405 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
-  <title>A Blackout – Cortinas e Persianas em Fortaleza</title>
-  <meta name="description" content="Cortinas, persianas, papéis de parede e revestimentos sob medida em Fortaleza." />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Blackout Cortinas, Persianas e Toldos</title>
+  <meta name="description"
+    content="Há mais de 15 anos especialista em transformar ambientes. Cortinas, persianas e toldos em Fortaleza e Mossoró." />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
+  <!-- ================= HEADER ================= -->
+  <header id="header">
     <div class="container header-content">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Blackout Cortinas">
-      </div>
+      <img src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas" class="logo">
 
-      <nav class="menu">
-        <a href="#home">Home</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Cortinas e Persianas sob medida</h1>
-      <p>Sua casa mais bonita, elegante e confortável.</p>
-      <a href="#contato" class="btn-primary">Solicitar orçamento</a>
-    </div>
-  </section>
+  <!-- ================= MENU ================= -->
+  <nav id="menu">
+    <ul>
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#ambientes">Ambientes</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#sobre">Sobre nós</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-  <!-- PRODUTOS -->
-  <section id="produtos" class="section">
+  <!-- ================= HERO ================= -->
+  <section id="hero">
     <div class="container">
-      <h2>Nossos Produtos</h2>
+      <h1>
+        Há mais de 15 anos especialista em
+        <span class="highlight">transformar ambientes.</span>
+      </h1>
 
-      <div class="grid-produtos" id="produtos-container">
-        <!-- Dinâmico via Firebase -->
+      <div class="hero-video">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/images/hero/video.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
       </div>
     </div>
   </section>
 
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos" class="section section-light">
+  <!-- ================= PRODUTOS ================= -->
+  <section id="produtos">
     <div class="container">
-      <h2>Depoimentos</h2>
-      <p>O que nossos clientes e parceiros dizem</p>
+      <h2>Produtos</h2>
 
-      <div class="grid-depoimentos" id="depoimentos-container">
-        <!-- Dinâmico via Firebase -->
+      <div class="grid produtos-grid">
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/cortinas.jpg" alt="Cortinas">
+          <div class="card-title">CORTINAS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/persianas.jpg" alt="Persianas">
+          <div class="card-title">PERSIANAS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/cortinas-motorizadas.jpg" alt="Cortinas Motorizadas">
+          <div class="card-title">CORTINAS MOTORIZADAS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/tela-solar.jpg" alt="Tela Solar">
+          <div class="card-title">TELA SOLAR</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/persianas-externas.jpg" alt="Persianas Externas">
+          <div class="card-title">PERSIANAS EXTERNAS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/papel-de-parede.jpg" alt="Papel de Parede">
+          <div class="card-title">PAPEL DE PAREDE</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/toldos.jpg" alt="Toldos">
+          <div class="card-title">TOLDOS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/cabeceiras.jpg" alt="Cabeceiras">
+          <div class="card-title">CABECEIRAS</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/piso-vinilico.jpg" alt="Piso Vinílico">
+          <div class="card-title">PISO VINÍLICO</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/tapetes.jpg" alt="Tapetes">
+          <div class="card-title">TAPETES</div>
+        </div>
+
+        <div class="card produto-card">
+          <img src="assets/images/produtos/cortina-hospitalar.jpg" alt="Cortina Hospitalar">
+          <div class="card-title">CORTINA HOSPITALAR</div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <div class="container contato">
-      <div class="contato-info">
-        <h2>Fale Conosco</h2>
-        <p>📞 (85) 3261-4122</p>
-        <p>✉️ vendas@blackoutcortinas.com.br</p>
-        <p>📍 Fortaleza – CE</p>
+  <!-- ================= AMBIENTES ================= -->
+  <section id="ambientes">
+    <div class="container">
+      <h2>Ambientes</h2>
+
+      <div class="grid ambientes-grid">
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/quarto.jpg" alt="Quarto">
+          <div class="card-title">QUARTO</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/sala-de-estar.jpg" alt="Sala de Estar">
+          <div class="card-title">SALA DE ESTAR</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/cozinha.jpg" alt="Cozinha">
+          <div class="card-title">COZINHA</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/varanda.jpg" alt="Varanda">
+          <div class="card-title">VARANDA</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/fachada.jpg" alt="Fachada">
+          <div class="card-title">FACHADA</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/area-externa.jpg" alt="Área Externa">
+          <div class="card-title">ÁREA EXTERNA</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/corporativo.jpg" alt="Corporativo">
+          <div class="card-title">CORPORATIVO</div>
+        </div>
+
+        <div class="card ambiente-card">
+          <img src="assets/images/ambientes/hospitalar.jpg" alt="Hospitalar">
+          <div class="card-title">HOSPITALAR</div>
+        </div>
+
       </div>
 
-      <form class="contato-form">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Blackout Cortinas. Todos os direitos reservados.</p>
+  <!-- ================= CLIENTES ================= -->
+  <section id="clientes">
+    <div class="container">
+      <h2>Clientes</h2>
+      <div class="clientes-carousel">
+        <div class="clientes-carousel-track">
+
+          <img src="assets/images/clientes/aeris.jpg" alt="Aeris" class="cliente-logo" />
+
+          <img src="assets/images/clientes/arcelor.jpg" alt="Arcelor" class="cliente-logo" />
+
+          <img src="assets/images/clientes/bb.jpg" alt="Banco do Brasil" class="cliente-logo" />
+
+          <img src="assets/images/clientes/j-macedo.jpg" alt="J Macedo" class="cliente-logo" />
+
+          <img src="assets/images/clientes/m-dias.jpg" alt="M Dias" class="cliente-logo" />
+
+          <img src="assets/images/clientes/sas.jpg" alt="SAS" class="cliente-logo" />
+
+          <img src="assets/images/clientes/sumitomo.jpg" alt="Sumitomo" class="cliente-logo" />
+
+          <img src="assets/images/clientes/unimed.jpg" alt="Unimed" class="cliente-logo" />
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SOBRE NÓS ================= -->
+  <section id="sobre">
+    <div class="container sobre-content">
+
+      <div class="sobre-imagem">
+        <img src="assets/images/sobre/sobre.jpg" alt="sobre" />
+      </div>
+
+      <div class="sobre-texto">
+        <h2>SOBRE NÓS</h2>
+
+        <p>A BlackOut é uma empresa especializada em cortinas, persianas e toldos.</p>
+
+        <p>Há mais de 15 anos, somos incansáveis em levar conforto, inovação, tecnologia e qualidade aos projetos de
+          nossos clientes.</p>
+
+        <p>Contando com uma estrutura moderna de Show Room nas cidades de Fortaleza e Mossoró, a Blackout oferece aos
+          estados do Ceará e do Rio Grande do Norte o melhor em cortinas, persianas, sistemas de proteção solar
+          (toldos), papéis de parede, piso vinílico, tapetes e cabeceiras.</p>
+
+        <p>Entre os nossos diferenciais, contamos com uma equipe qualificada desde o atendimento até a produção e a
+          instalação dos nossos produtos.</p>
+      </div>
+
+    </div>
+
+    <!-- ===== MAPAS ===== -->
+    <div class="container lojas">
+
+      <!-- Fortaleza -->
+      <div class="loja">
+        <iframe loading="lazy"
+          src="https://maps.google.com/maps?q=Rua%20Costa%20Barros%202000%20-%20Aldeota%2C%20Fortaleza%20-%20CE%2C%2060160-281&z=15&output=embed"
+          title="Blackout Fortaleza" aria-label="Blackout Fortaleza"></iframe>
+
+        <h4>Blackout Fortaleza</h4>
+        <p>Rua Costa Barros, 2000, Loja 8 e 9 – Aldeota<br>
+          Fortaleza – CE, 60160-281</p>
+      </div>
+
+      <!-- Mossoró -->
+      <div class="loja">
+        <iframe loading="lazy"
+          src="https://maps.google.com/maps?q=Beth%C3%A2nia%20Mall%20-%20Av.%20Jo%C3%A3o%20da%20Esc%C3%B3ssia%2C%201272-1290%20-%20Mossor%C3%B3%20-%20RN%2C%2059612-040&z=15&output=embed"
+          title="Blackout Mossoró" aria-label="Blackout Mossoró"></iframe>
+
+        <h4>Blackout Mossoró</h4>
+        <p>Bethânia Mall – Av. João da Escóssia, 1272–1290<br>
+          Mossoró – RN, 59612-040</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section id="depoimentos">
+    <div class="container">
+      <h2>DEPOIMENTOS</h2>
+
+      <div class="depoimentos-lista">
+
+        <!-- Ivna Gois -->
+        <div class="depoimento">
+          <p>
+            “Reformei recentemente meu apartamento e encontrei uma variedade de
+            papéis de parede que fizeram a diferença na decoração do meu lar.
+            Recomendo demais!”
+          </p>
+
+          <div class="depoimento-footer">
+            <img src="assets/images/depoimentos/ivna-gois.jpg" alt="Ivna Gois" class="depoimento-avatar" />
+            <div>
+              <div class="depoimento-nome">Ivna Gois</div>
+              <div class="depoimento-tempo">2 anos atrás</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rilson Junior -->
+        <div class="depoimento">
+          <p>
+            “Excelente atendimento e bons preços. Vale a pena conhecer.”
+          </p>
+
+          <div class="depoimento-footer">
+            <img src="assets/images/depoimentos/rilson-junior.jpg" alt="Rilson Junior" class="depoimento-avatar" />
+            <div>
+              <div class="depoimento-nome">Rilson Junior</div>
+              <div class="depoimento-tempo">2 anos atrás</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ana Cecilia -->
+        <div class="depoimento">
+          <p>
+            “Um espetáculo o serviço. Fiquei muito satisfeita. Super indico.”
+          </p>
+
+          <div class="depoimento-footer">
+            <img src="assets/images/depoimentos/ana-cecilia.jpg" alt="Ana Cecília" class="depoimento-avatar" />
+            <div>
+              <div class="depoimento-nome">Ana Cecília</div>
+              <div class="depoimento-tempo">2 anos atrás</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Luiz Salmito -->
+        <div class="depoimento">
+          <p>
+            “Atendimento muito bom, encontrei tudo o que queria!”
+          </p>
+
+          <div class="depoimento-footer">
+            <img src="assets/images/depoimentos/luiz-salmito.jpg" alt="Luiz Salmito" class="depoimento-avatar" />
+            <div>
+              <div class="depoimento-nome">Luiz Salmito</div>
+              <div class="depoimento-tempo">2 anos atrás</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section id="contato">
+    <div class="container">
+      <!-- WhatsApp + unidades -->
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer">
+    <div class="container footer-content">
+
+      <!-- LOGO -->
+      <div class="footer-logo">
+        <img src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas, Persianas e Toldos" />
+      </div>
+
+      <!-- FORTALEZA -->
+      <div class="footer-col">
+        <h4>Blackout Fortaleza</h4>
+
+        <p>
+          <a href="https://wa.me/5585997113098?text=Olá,%20vim%20pelo%20site%20da%20Blackout." target="_blank">
+            +55 (85) 99711-3098
+          </a>
+        </p>
+
+        <p>Seg – Sex | 9h às 18h</p>
+        <p>Sáb | 9h às 13h</p>
+      </div>
+
+      <!-- MOSSORÓ -->
+      <div class="footer-col">
+        <h4>Blackout Mossoró</h4>
+
+        <p>
+          <a href="https://wa.me/5584999900445?text=Olá,%20vim%20pelo%20site%20da%20Blackout." target="_blank">
+            +55 (84) 99990-0445
+          </a>
+        </p>
+
+        <p>Seg – Sex | 8h às 12h e 14h às 18h</p>
+        <p>Sáb | 8h às 12h</p>
+      </div>
+
+      <!-- ENTREGAS -->
+      <div class="footer-col">
+        <h4>Entregas</h4>
+        <p>Ceará</p>
+        <p>Rio Grande do Norte</p>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Blackout – Cortinas, Persianas e Toldos. Todos os direitos reservados.
+    </div>
   </footer>
 
+
   <!-- JS -->
-  <script src="js/home.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
+
 </html>

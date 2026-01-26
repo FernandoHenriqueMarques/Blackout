@@ -1,0 +1,181 @@
+/* ===============================
+   HEADER
+================================ */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-black);
+  z-index: var(--z-header);
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+}
+
+/* ===============================
+   MENU FULLSCREEN
+================================ */
+
+#menu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-black);
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-menu);
+}
+
+#menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+#menu a {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-medium);
+}
+
+/* ===============================
+   HERO
+================================ */
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#hero h1 {
+  max-width: 700px;
+}
+
+/* ===============================
+   GRIDS
+================================ */
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Produtos */
+.produtos-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Ambientes */
+.ambientes-grid {
+  grid-template-columns: 1fr;
+}
+
+/* ===============================
+   CLIENTES
+================================ */
+
+.clientes-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ===============================
+   SOBRE NÓS
+================================ */
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.lojas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+/* ===============================
+   DEPOIMENTOS
+================================ */
+
+.depoimentos-lista {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+#footer {
+  background-color: var(--color-dark);
+  padding-top: var(--space-xl);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.footer-copy {
+  text-align: center;
+  padding: var(--space-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-light);
+}
+
+/* ===============================
+   RESPONSIVO
+================================ */
+
+@media (min-width: 768px) {
+
+  .produtos-grid,
+  .ambientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lojas {
+    flex-direction: row;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .produtos-grid,
+  .ambientes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo {
+    height: 40px;
+  }
+}
