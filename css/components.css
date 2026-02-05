@@ -99,12 +99,25 @@
 ================================ */
 
 .depoimento {
-  min-width: 320px;
+  flex: 0 0 calc((100% - (var(--space-md) * 2)) / 3);
+  min-width: 0;
   background: linear-gradient(135deg, var(--color-gray-dark), var(--color-gray));
   padding: var(--space-lg);
   border-radius: 8px;
   scroll-snap-align: start;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1023px) {
+  .depoimento {
+    flex-basis: calc((100% - var(--space-md)) / 2);
+  }
+}
+
+@media (max-width: 767px) {
+  .depoimento {
+    flex-basis: 85%;
+  }
 }
 
 .depoimento p {

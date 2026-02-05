@@ -192,11 +192,19 @@
    DEPOIMENTOS
 ================================ */
 
+.depoimentos-carousel {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.depoimentos-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 .depoimentos-lista {
   display: flex;
   gap: var(--space-md);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
 }
 
 /* ===============================
