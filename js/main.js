@@ -27,18 +27,6 @@ if (carousel && track) {
   animateCarousel();
 }
 
-// ===============================
-// WHATSAPP FLUTUANTE
-// ===============================
-
-const whatsappButton = document.querySelector('.whatsapp-float');
-
-if (whatsappButton) {
-  whatsappButton.addEventListener('click', () => {
-    const phone = '5585999999999'; // atualizar número
-    const message = encodeURIComponent('Olá, vim pelo site da Blackout.');
-    const url = `https://wa.me/${phone}?text=${message}`;
-
-    window.open(url, '_blank');
-  });
-}
+// O botão de WhatsApp flutuante já possui URL no atributo `href` do HTML.
+// Não adicionamos listener aqui para evitar abrir abas duplicadas e usar
+// um número hardcoded diferente do configurado no markup.
