@@ -10,7 +10,7 @@ if (carousel && track) {
   track.innerHTML += track.innerHTML;
 
   let position = 0;
-  const speed = 0.5; // ajuste fino da velocidade
+  const speed = 1.2; // ajuste fino da velocidade
 
   function animateCarousel() {
     position -= speed;
