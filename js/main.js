@@ -28,36 +28,13 @@ function initInfiniteCarousel({ viewportSelector, trackSelector, speed }) {
   animateCarousel();
 }
 
-function initAutoScrollCarousel({ viewportSelector, trackSelector, speed }) {
-  const viewport = document.querySelector(viewportSelector);
-  const track = document.querySelector(trackSelector);
-
-  if (!viewport || !track) {
-    return;
-  }
-
-  track.innerHTML += track.innerHTML;
-
-  function animateScroll() {
-    viewport.scrollLeft += speed;
-
-    if (viewport.scrollLeft >= track.scrollWidth / 2) {
-      viewport.scrollLeft = 0;
-    }
-
-    requestAnimationFrame(animateScroll);
-  }
-
-  animateScroll();
-}
-
 initInfiniteCarousel({
   viewportSelector: '.clientes-carousel',
   trackSelector: '.clientes-carousel-track',
   speed: 1.2
 });
 
-initAutoScrollCarousel({
+initInfiniteCarousel({
   viewportSelector: '.depoimentos-carousel',
   trackSelector: '.depoimentos-lista',
   speed: 0.45

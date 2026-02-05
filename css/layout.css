@@ -193,18 +193,13 @@
 ================================ */
 
 .depoimentos-carousel {
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.depoimentos-carousel::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .depoimentos-lista {
   display: flex;
   gap: var(--space-md);
+  width: max-content;
 }
 
 /* ===============================
