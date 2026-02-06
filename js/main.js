@@ -47,86 +47,43 @@ function initInfiniteCarousel({ viewportSelector, trackSelector, speed }) {
     requestAnimationFrame(animateCarousel);
   }
 
-  function startDragging(clientX) {
+  function onPointerDown(event) {
     isDragging = true;
-    startX = clientX;
+    startX = event.clientX;
     startPosition = position;
     viewport.classList.add('is-dragging');
+    viewport.setPointerCapture(event.pointerId);
   }
 
-  function dragTo(clientX) {
+  function onPointerMove(event) {
     if (!isDragging) {
       return;
     }
 
-    const deltaX = clientX - startX;
+    const deltaX = event.clientX - startX;
     position = startPosition + deltaX;
     normalizePosition();
     applyTransform();
   }
 
-  function stopDragging() {
+  function stopDragging(event) {
     if (!isDragging) {
       return;
     }
 
     isDragging = false;
     viewport.classList.remove('is-dragging');
-  }
 
-  function onPointerDown(event) {
-    startDragging(event.clientX);
-
-    if (viewport.setPointerCapture) {
-      viewport.setPointerCapture(event.pointerId);
-    }
-  }
-
-  function onPointerMove(event) {
-    dragTo(event.clientX);
-  }
-
-  function onPointerUp(event) {
-    stopDragging();
-
-    if (viewport.releasePointerCapture) {
+    if (event) {
       viewport.releasePointerCapture(event.pointerId);
-    }
-  }
-
-  function onTouchStart(event) {
-    const firstTouch = event.touches[0];
-
-    if (!firstTouch) {
-      return;
-    }
-
-    startDragging(firstTouch.clientX);
-  }
-
-  function onTouchMove(event) {
-    const firstTouch = event.touches[0];
-
-    if (!firstTouch) {
-      return;
-    }
-
-    dragTo(firstTouch.clientX);
-
-    if (isDragging) {
-      event.preventDefault();
     }
   }
 
   viewport.addEventListener('pointerdown', onPointerDown);
   viewport.addEventListener('pointermove', onPointerMove);
-  viewport.addEventListener('pointerup', onPointerUp);
+  viewport.addEventListener('pointerup', stopDragging);
   viewport.addEventListener('pointercancel', stopDragging);
-
-  viewport.addEventListener('touchstart', onTouchStart, { passive: true });
-  viewport.addEventListener('touchmove', onTouchMove, { passive: false });
-  viewport.addEventListener('touchend', stopDragging);
-  viewport.addEventListener('touchcancel', stopDragging);
+  viewport.addEventListener('pointerleave', stopDragging);
 
   animateCarousel();
 }
