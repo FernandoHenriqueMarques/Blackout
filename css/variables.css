@@ -17,7 +17,7 @@
      TIPOGRAFIA
   =============================== */
 
-  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-primary: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Tamanhos base */
   --font-size-xs: 0.75rem;
