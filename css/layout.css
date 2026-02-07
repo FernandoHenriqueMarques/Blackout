@@ -200,15 +200,18 @@
 .lojas {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: var(--space-lg);
   margin-top: var(--space-xl);
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: visible;
+  width: 100%;
 }
 
 .loja {
-  flex: 1 0 320px;
-  max-width: 480px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
 }
 
 /* ===============================
@@ -360,14 +363,23 @@
   }
 
   .sobre-texto {
-    flex: 1;
+    flex: 1.15;
     order: 1;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 62ch;
   }
 
   .sobre-imagem {
-    flex: 1;
+    flex: 0.85;
     order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sobre-imagem img {
+    width: 80%;
+    max-width: 460px;
   }
 
   .sobre-texto p {
