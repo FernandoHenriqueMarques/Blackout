@@ -223,6 +223,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/ambientes/cozinha.jpg" fetchpriority="high">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -234,7 +235,7 @@
   <!-- ================= HEADER ================= -->
   <header id="header">
     <div class="container header-content">
-      <img src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas" class="logo">
+      <img src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas" class="logo" width="1024" height="173" fetchpriority="high" decoding="async">
 
       <nav id="menu">
         <ul>
@@ -258,8 +259,8 @@
   <section id="hero">
     <div class="container">
       <div class="hero-video">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="assets/images/hero/video.mp4" type="video/mp4">
+        <video muted loop playsinline preload="none" poster="assets/images/ambientes/cozinha.jpg" aria-label="Vídeo de ambientes Blackout">
+          <source data-src="assets/images/hero/video.mp4" type="video/mp4">
           Seu navegador não suporta vídeo.
         </video>
       </div>
@@ -294,57 +295,57 @@
       <div class="grid produtos-grid">
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/cortinas.jpg" alt="Cortinas">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/cortinas.jpg" alt="Cortinas">
           <div class="card-title">CORTINAS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/persianas.jpg" alt="Persianas">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/persianas.jpg" alt="Persianas">
           <div class="card-title">PERSIANAS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/cortinas-motorizadas.jpg" alt="Cortinas Motorizadas">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/cortinas-motorizadas.jpg" alt="Cortinas Motorizadas">
           <div class="card-title">CORTINAS MOTORIZADAS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/tela-solar.jpg" alt="Tela Solar">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/tela-solar.jpg" alt="Tela Solar">
           <div class="card-title">TELA SOLAR</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/persianas-externas.jpg" alt="Persianas Externas">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/persianas-externas.jpg" alt="Persianas Externas">
           <div class="card-title">PERSIANAS EXTERNAS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/papel-de-parede.jpg" alt="Papel de Parede">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/papel-de-parede.jpg" alt="Papel de Parede">
           <div class="card-title">PAPEL DE PAREDE</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/toldos.jpg" alt="Toldos">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/toldos.jpg" alt="Toldos">
           <div class="card-title">TOLDOS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/cabeceiras.jpg" alt="Cabeceiras">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/cabeceiras.jpg" alt="Cabeceiras">
           <div class="card-title">CABECEIRAS</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/piso-vinilico.jpg" alt="Piso Vinílico">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/piso-vinilico.jpg" alt="Piso Vinílico">
           <div class="card-title">PISO VINÍLICO</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/tapetes.jpg" alt="Tapetes">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/tapetes.jpg" alt="Tapetes">
           <div class="card-title">TAPETES</div>
         </div>
 
         <div class="card produto-card">
-          <img src="assets/images/produtos/cortina-hospitalar.jpg" alt="Cortina Hospitalar">
+          <img loading="lazy" decoding="async" src="assets/images/produtos/cortina-hospitalar.jpg" alt="Cortina Hospitalar">
           <div class="card-title">CORTINA HOSPITALAR</div>
         </div>
 
@@ -361,42 +362,42 @@
       <div class="grid ambientes-grid">
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/quarto.jpg" alt="Quarto">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/quarto.jpg" alt="Quarto">
           <div class="card-title">QUARTO</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/sala-de-estar.jpg" alt="Sala de Estar">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/sala-de-estar.jpg" alt="Sala de Estar">
           <div class="card-title">SALA DE ESTAR</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/cozinha.jpg" alt="Cozinha">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/cozinha.jpg" alt="Cozinha">
           <div class="card-title">COZINHA</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/varanda.jpg" alt="Varanda">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/varanda.jpg" alt="Varanda">
           <div class="card-title">VARANDA</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/fachada.jpg" alt="Fachada">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/fachada.jpg" alt="Fachada">
           <div class="card-title">FACHADA</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/area-externa.jpg" alt="Área Externa">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/area-externa.jpg" alt="Área Externa">
           <div class="card-title">ÁREA EXTERNA</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/corporativo.jpg" alt="Corporativo">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/corporativo.jpg" alt="Corporativo">
           <div class="card-title">CORPORATIVO</div>
         </div>
 
         <div class="card ambiente-card">
-          <img src="assets/images/ambientes/hospitalar.jpg" alt="Hospitalar">
+          <img loading="lazy" decoding="async" src="assets/images/ambientes/hospitalar.jpg" alt="Hospitalar">
           <div class="card-title">HOSPITALAR</div>
         </div>
 
@@ -412,21 +413,21 @@
       <div class="clientes-carousel">
         <div class="clientes-carousel-track">
 
-          <img src="assets/images/clientes/aeris.jpg" alt="Aeris" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/aeris.jpg" alt="Aeris" class="cliente-logo" width="310" height="199" />
 
-          <img src="assets/images/clientes/arcelor.jpg" alt="Arcelor" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/arcelor.jpg" alt="Arcelor" class="cliente-logo" width="350" height="144" />
 
-          <img src="assets/images/clientes/bb.jpg" alt="Banco do Brasil" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/bb.jpg" alt="Banco do Brasil" class="cliente-logo" width="300" height="300" />
 
-          <img src="assets/images/clientes/j-macedo.jpg" alt="J Macedo" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/j-macedo.jpg" alt="J Macedo" class="cliente-logo" width="448" height="224" />
 
-          <img src="assets/images/clientes/m-dias.jpg" alt="M Dias" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/m-dias.jpg" alt="M Dias" class="cliente-logo" width="358" height="131" />
 
-          <img src="assets/images/clientes/sas.jpg" alt="SAS" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/sas.jpg" alt="SAS" class="cliente-logo" width="333" height="145" />
 
-          <img src="assets/images/clientes/sumitomo.jpg" alt="Sumitomo" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/sumitomo.jpg" alt="Sumitomo" class="cliente-logo" width="300" height="58" />
 
-          <img src="assets/images/clientes/unimed.jpg" alt="Unimed" class="cliente-logo" />
+          <img loading="lazy" decoding="async" src="assets/images/clientes/unimed.jpg" alt="Unimed" class="cliente-logo" width="800" height="286" />
 
         </div>
       </div>
@@ -456,7 +457,7 @@
         </div>
 
         <div class="sobre-imagem">
-          <img src="assets/images/sobre/sobre.jpg" alt="sobre" />
+          <img loading="lazy" decoding="async" src="assets/images/sobre/sobre.jpg" alt="sobre" width="972" height="972" />
         </div>
       </div>
 
@@ -507,7 +508,7 @@
             </p>
 
             <div class="depoimento-footer">
-              <img src="assets/images/depoimentos/ivna-gois.jpg" alt="Ivna Gois" class="depoimento-avatar" />
+              <img loading="lazy" decoding="async" src="assets/images/depoimentos/ivna-gois.jpg" alt="Ivna Gois" class="depoimento-avatar" width="60" height="60" />
               <div>
                 <div class="depoimento-nome">Ivna Gois</div>
                 <div class="depoimento-tempo">2 anos atrás</div>
@@ -522,7 +523,7 @@
             </p>
 
             <div class="depoimento-footer">
-              <img src="assets/images/depoimentos/rilson-junior.jpg" alt="Rilson Junior" class="depoimento-avatar" />
+              <img loading="lazy" decoding="async" src="assets/images/depoimentos/rilson-junior.jpg" alt="Rilson Junior" class="depoimento-avatar" width="60" height="60" />
               <div>
                 <div class="depoimento-nome">Rilson Junior</div>
                 <div class="depoimento-tempo">2 anos atrás</div>
@@ -537,7 +538,7 @@
             </p>
 
             <div class="depoimento-footer">
-              <img src="assets/images/depoimentos/ana-cecilia.jpg" alt="Ana Cecília" class="depoimento-avatar" />
+              <img loading="lazy" decoding="async" src="assets/images/depoimentos/ana-cecilia.jpg" alt="Ana Cecília" class="depoimento-avatar" width="60" height="60" />
               <div>
                 <div class="depoimento-nome">Ana Cecília</div>
                 <div class="depoimento-tempo">2 anos atrás</div>
@@ -552,7 +553,7 @@
             </p>
 
             <div class="depoimento-footer">
-              <img src="assets/images/depoimentos/luiz-salmito.jpg" alt="Luiz Salmito" class="depoimento-avatar" />
+              <img loading="lazy" decoding="async" src="assets/images/depoimentos/luiz-salmito.jpg" alt="Luiz Salmito" class="depoimento-avatar" width="60" height="60" />
               <div>
                 <div class="depoimento-nome">Luiz Salmito</div>
                 <div class="depoimento-tempo">2 anos atrás</div>
@@ -579,7 +580,7 @@
 
       <!-- LOGO -->
       <div class="footer-logo">
-        <img src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas, Persianas e Toldos" />
+        <img loading="lazy" decoding="async" src="assets/images/logo/logo-blackout.png" alt="Blackout Cortinas, Persianas e Toldos" width="1024" height="173" />
       </div>
 
       <!-- FORTALEZA -->
@@ -691,8 +692,8 @@
 
 
   <!-- JS -->
-  <script src="js/menu.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/main.js" defer></script>
 
 </body>
 

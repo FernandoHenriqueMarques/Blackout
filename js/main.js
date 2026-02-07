@@ -1,4 +1,42 @@
 // ===============================
+// HERO VIDEO DEFERIDO
+// ===============================
+
+function initDeferredHeroVideo() {
+  const heroVideo = document.querySelector('.hero-video video');
+
+  if (!heroVideo) {
+    return;
+  }
+
+  const source = heroVideo.querySelector('source[data-src]');
+  if (!source || !source.dataset.src) {
+    return;
+  }
+
+  const loadAndPlayVideo = () => {
+    source.src = source.dataset.src;
+    source.removeAttribute('data-src');
+    heroVideo.load();
+
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        // Em navegadores que bloqueiam autoplay, mantém apenas o poster.
+      });
+    }
+  };
+
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadAndPlayVideo, { timeout: 1500 });
+  } else {
+    window.setTimeout(loadAndPlayVideo, 800);
+  }
+}
+
+initDeferredHeroVideo();
+
+// ===============================
 // CARROSSEIS CONTÍNUOS
 // ===============================
 
