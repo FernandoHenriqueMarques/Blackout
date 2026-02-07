@@ -66,8 +66,8 @@
 }
 
 .hero-video {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: linear-gradient(180deg, #161616 0%, #090909 100%);
@@ -264,7 +264,7 @@
   }
 
   #hero {
-    padding-top: 0;
+    padding-top: var(--header-height);
     min-height: auto;
     padding-bottom: 0;
   }
@@ -276,10 +276,18 @@
   .hero-video {
     width: 100%;
     margin: 0;
+    aspect-ratio: unset;
+    height: auto;
+    overflow: visible;
     border-radius: 0;
   }
   
   .hero-video video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: unset;
+    aspect-ratio: auto;
     border-radius: 0;
   }
   
@@ -320,7 +328,7 @@
   }
 
   #hero {
-    padding-top: calc(var(--header-height) + 2rem);
+    padding-top: var(--header-height);
   }
 
   .produtos-grid,

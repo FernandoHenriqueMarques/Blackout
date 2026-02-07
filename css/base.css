@@ -164,17 +164,28 @@ section:not(#hero) {
 ================================ */
 
 @media (max-width: 767px) {
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
   h2::before,
   h2::after {
+    position: static;
     width: 40px;
+    flex: 0 0 40px;
+    top: auto;
+    transform: none;
   }
   
   h2::before {
-    left: calc(50% - 80px);
+    left: auto;
   }
   
   h2::after {
-    right: calc(50% - 80px);
+    right: auto;
   }
 }
 
