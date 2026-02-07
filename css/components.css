@@ -99,14 +99,14 @@
 
 .cliente-logo {
   height: 60px;
-  opacity: 0.8;
-  filter: grayscale(100%);
+  opacity: 1;
+  filter: none;
   transition: all var(--transition-base);
 }
 
 .cliente-logo:hover {
   opacity: 1;
-  filter: grayscale(0%);
+  filter: none;
 }
 
 /* ===============================
