@@ -267,20 +267,28 @@
     inset: 0;
     background-color: var(--color-black);
     display: none;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     z-index: var(--z-menu);
     margin-left: 0;
+    padding: calc(var(--header-height) + var(--space-lg)) var(--container-padding) var(--space-lg);
   }
 
   #menu ul {
     flex-direction: column;
-    gap: var(--space-lg);
-    text-align: center;
+    gap: var(--space-md);
+    text-align: left;
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
   }
 
   #menu a {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
+    padding: var(--space-xs) 0;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.05em;
   }
 
   #hero {
